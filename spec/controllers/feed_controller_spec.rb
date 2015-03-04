@@ -19,7 +19,7 @@ describe FeedController do
           expect(APIService.instance).to receive(:pull_posts) { [first_post, second_post, third_post] }
 
           get :index, :format => :html
-          expect(assigns(:posts)).to match_array([third_post, second_post, first_post])
+          expect(assigns(:posts)).to eq([third_post, second_post, first_post])
         end
 
         it "should limit number of posts to 10 posts" do
@@ -52,7 +52,7 @@ describe FeedController do
     it 'should return a list of older posts', dont_run_in_snap: true do
       first_post.id, second_post.id = first_post.id, second_post.id
       get :get_next_page, last_post_id: third_post.id, :format => :json
-      expect(assigns(:posts)).to match_array([second_post, first_post])
+      expect(assigns(:posts)).to eq([second_post, first_post])
     end
 
     it 'should return a maximum of 10 posts' do
