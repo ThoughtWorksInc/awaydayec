@@ -19,7 +19,9 @@ describe FeedController do
 
           get :index, :format => :html
 
-          expect(assigns(:posts).to_a).to eq([third_post, second_post, first_post])
+          expect(assigns(:posts)[0]).to eq(third_post)
+          expect(assigns(:posts)[1]).to eq(second_post)
+          expect(assigns(:posts)[2]).to eq(first_post)
         end
 
         it "should limit number of posts to 10 posts" do
@@ -54,7 +56,8 @@ describe FeedController do
 
       get :get_next_page, last_post_id: third_post.id, :format => :json
 
-      expect(assigns(:posts).to_a).to eq([second_post, first_post])
+      expect(assigns(:posts)[0]).to eq(second_post)
+      expect(assigns(:posts)[1]).to eq(first_post)
     end
 
     it 'should return a maximum of 10 posts' do
