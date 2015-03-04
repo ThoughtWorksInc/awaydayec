@@ -1,3 +1,5 @@
+[![Build Status](https://snap-ci.com/thoughtworks/missaoTW/branch/master/build_image)](https://snap-ci.com/thoughtworks/missaoTW/branch/master)
+
 Dashtag
 =================
 Check out the example of Hashtag Displayer [here on our staging site](http://hashtag-displayer-staging-1.herokuapp.com/).
@@ -8,7 +10,7 @@ The application uses [Twitter's REST API](https://dev.twitter.com/rest/reference
 
 To Deploy To Heroku
 -------------------
- Simply put the environment variables, as described below, into Heroku's dashboard after hitting the Deploy to Heroku Button above. 
+ Simply put the environment variables, as described below, into Heroku's dashboard after hitting the Deploy to Heroku Button above.
  [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/anirudh-eka/dashtag.git)
 
 
@@ -22,7 +24,7 @@ Currently the application expects the following variables in the environment:
 - 	INSTAGRAM_CLIENT_ID
 -	DISABLE_RETWEETS
 
-`Hashtag` should be set to the text of the hashtag excluding the initial '#'. So if you wanted all of the posts with the "#peace" on Twitter, you set: 
+`Hashtag` should be set to the text of the hashtag excluding the initial '#'. So if you wanted all of the posts with the "#peace" on Twitter, you set:
 	HASHTAG=peace
 
 To prevent from storing posts with certain words set the environment variable `CENSORED_WORDS` to the words you dont want to include in the .env file. For example, to censor posts that contain the word, "question", add the following line in the .env file:
@@ -72,7 +74,7 @@ Once you have the .env file setup, run bundler from the command line:
 	$ bundle
 
 create/migrate the database:
-	
+
 	$ rake db:create && rake db:migrate
 
 and start the server:
