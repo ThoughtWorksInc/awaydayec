@@ -16,7 +16,7 @@ describe FeedController do
       context "returns all posts in db" do
         it "should call api service to pull most recent tweets and return posts in descending order", dont_run_in_snap: true do
 
-          expect(APIService.instance).to receive(:pull_posts)
+          expect(APIService.instance).to receive(:pull_posts) { [first_post, second_post, third_post] }
 
           get :index, :format => :html
           expect(assigns(:posts)).to eq([third_post, second_post, first_post])
