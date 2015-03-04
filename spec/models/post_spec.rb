@@ -6,16 +6,16 @@ describe Post do
   it { should validate_presence_of(:profile_image_url) }
   it { should validate_presence_of(:source) }
   context "when disable retweets is turned off" do
-    before(:each) do
+    before(:each) do 
       expect(EnvironmentService).to receive(:disable_retweets) {true}
     end
-
-    it "should validate that the post is not a retweet" do
-      retweet = FactoryGirl.build(:post,
+    
+    it "should validate that the post is not a retweet" do 
+      retweet = FactoryGirl.build(:post, 
         text: "RT @akacharleswade: Pouring rain. So what. Stay in these streets! #UmbrellaRevolution",
         source: "twitter")
       expect{ retweet.save! }.to raise_error()
-      expect(retweet.errors.messages[:text]).to eq(["can't be a retweet"])
+      expect(retweet.errors.messages[:text]).to eq(["can't be a retweet"]) 
     end
   end
 
@@ -106,7 +106,7 @@ describe Post do
         allow(APIService.instance).to receive(:pull_posts).and_return(true)
         result = Post.get_new_posts("#{ENV["HASHTAG"]}")
         expect(result).to_not eq([old_post, new_post])
-        expect(result).to match_array([new_post])
+        expect(result).to eq([new_post])
       end
     end
     context "when api does not pull new posts" do
