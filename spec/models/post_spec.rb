@@ -6,16 +6,16 @@ describe Post do
   it { should validate_presence_of(:profile_image_url) }
   it { should validate_presence_of(:source) }
   context "when disable retweets is turned off" do
-    before(:each) do 
+    before(:each) do
       expect(EnvironmentService).to receive(:disable_retweets) {true}
     end
-    
-    it "should validate that the post is not a retweet" do 
-      retweet = FactoryGirl.build(:post, 
+
+    it "should validate that the post is not a retweet" do
+      retweet = FactoryGirl.build(:post,
         text: "RT @akacharleswade: Pouring rain. So what. Stay in these streets! #UmbrellaRevolution",
         source: "twitter")
       expect{ retweet.save! }.to raise_error()
-      expect(retweet.errors.messages[:text]).to eq(["can't be a retweet"]) 
+      expect(retweet.errors.messages[:text]).to eq(["can't be a retweet"])
     end
   end
 
@@ -79,14 +79,13 @@ describe Post do
 
   describe 'gets new posts since last pull' do
     context "when api does pull new posts" do
+      let(:last_pull_stub) { Time.now }
+      let(:time_of_post) { Time.now - 5 }
+
       before(:each) do
         allow(APIService.instance).to receive(:get_posts).and_return(true)
-      end
-      it "should return only posts after last pull", dont_run_in_snap: true do
-        last_pull_stub = Time.now
-        time_of_post = Time.now - 5
 
-        old_post = Post.create!(screen_name: "cassius_clay",
+        Post.create!(screen_name: "cassius_clay",
                     profile_image_url: "stuff.com",
                     created_at: (last_pull_stub - 30),
                     time_of_post: (time_of_post),
@@ -94,16 +93,21 @@ describe Post do
                     text: "the old post",
                     post_id: "qwe")
 
-        new_post = Post.create!(screen_name: "cassius_clay",
+        Post.create!(screen_name: "cassius_clay",
                     profile_image_url: "stuff.com",
                     created_at: (last_pull_stub + 30),
                     time_of_post: (time_of_post + 2),
                     source: "twitter",
                     text: "the new post",
                     post_id: "iop")
+      end
+      it "should return only posts after last pull", dont_run_in_snap: true do
+        old_post = Post.first
+        new_post = Post.last
 
         allow(APIService.instance).to receive(:last_update).and_return(last_pull_stub)
         allow(APIService.instance).to receive(:pull_posts).and_return(true)
+
         result = Post.get_new_posts("#{ENV["HASHTAG"]}")
         expect(result).to_not eq([old_post, new_post])
         expect(result).to eq([new_post])
