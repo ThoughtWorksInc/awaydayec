@@ -1,40 +1,287 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-  word-wrap: break-word;
-  color: #FFF;
-  background-color: #FFFFFF;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,400italic,300italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic);
+
+@font-face {
+    font-family: aPapa;
+    src: url(APAPA.TTF);
 }
 
 body {
-  margin-top: 65px;
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
+    color: #FFF;
+    background-color: #FFFFFF;
+}
+
+body {
+    margin-top: 65px;
+    overflow-x: hidden;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 8vw;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: left;
+    font-style: normal;
+    color: #f16254;
+    margin: 0px 100px 10px 500px;
+    padding-left: 50px;
+}
+
+.country {
+    color: #f16254;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: left;
+    margin-left: 500px;
+    margin-top: 0px;
+    font-style: normal;
+    padding: 0px 10px 10px 270px;
+    text-transform: uppercase;
+}
+
+.logo-ecuador {
+    position: absolute;
+    right: 60%;
+    top: 17%;
+    /*margin-top: -55px;*/
+    /*margin-right: 5px;*/
+    height: 600px;
+    /*background-color: #283452;*/
+    /*padding-top: 150px;*/
+    /*padding-left: 75px;*/
+    /*padding-right: 90px;*/
+}
+
+.earth {
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    z-index: 2;
+}
+
+.planet {
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 100%;
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+    margin-left: -60px;
+    margin-top: -60px;
+    z-index: 2;
+}
+
+.surface {
+    position: absolute;
+    border-radius: 100%;
+    height: 140%;
+    width: 140%;
+    top: -30%;
+    right: -10%;
+    box-sizing: border-box;
+    border: 30px solid #097AC0;
+    background: #097AC0;
+}
+
+.crater1,
+.crater2,
+.crater3 {
+    position: absolute;
+    border-radius: 100%;
+    background: #009900;
+    box-shadow: inset 3px 3px 0 #009900;
+}
+
+.crater1 {
+    height: 30px;
+    width: 30px;
+    top: 22%;
+    left: 27%;
+    box-shadow: inset 3px 3px 0 rgba(0, 0, 0, .2);
+}
+
+.crater2 {
+    height: 20px;
+    width: 20px;
+    top: 26%;
+    left: 65%;
+    box-shadow: inset 2px 2px 0 rgba(0, 0, 0, .2);
+}
+
+.crater3 {
+    height: 15px;
+    width: 15px;
+    top: 60%;
+    left: 50%;
+    box-shadow: inset 2px 2px 0 rgba(0, 0, 0, .2);
+}
+
+.ship {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    margin-top: -55px;
+    margin-right: -45px;
+    height: 20px;
+    transform-origin: 0% 100% 0;
+    z-index: 1;
+    animation: ship 12s cubic-bezier(0.8, 0.5, 0.6, 1) forwards;
+}
+
+.ship-rotate {
+    position: absolute;
+    height: 20px;
+    transform: rotate(-90deg);
+    animation: ship-rotate 12s cubic-bezier(0.8, 0.5, 0.6, 1) forwards;
+}
+
+.pod {
+    position: absolute;
+    top: 0;
+    left: -8px;
+    height: 16px;
+    width: 16px;
+    background: #bdbdbd;
+    border-radius: 100% 0 100% 0;
+    transform: rotate(-50deg);
+}
+
+.fuselage {
+    position: absolute;
+    top: 14px;
+    left: -6px;
+    height: 8px;
+    width: 14px;
+    background: #bdbdbd;
+    border-radius: 100% 100% 0 0;
+}
+
+.fuselage:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid darkred;
+}
+
+@keyframes ship {
+    0% {
+        right: 0%;
+        top: 0%;
+    }
+    100% {
+        right: 36%;
+        top: 39%;
+        margin-top: -58px;
+        margin-right: -58px;
+    }
+}
+
+@keyframes ship-rotate {
+    50% {
+        transform: rotate(-110deg);
+    }
+    100% {
+        transform: rotate(47deg);
+    }
+}
+
+.cls-1, .cls-3, .cls-4 {
+    fill: #7eb49d;
+}
+
+.cls-2 {
+    fill: none;
+    stroke: #7eb49d;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 6.9px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear alternate infinite;
+}
+
+.cls-3 {
+    font-size: 86.23px;
+    font-family: aPapa;
+}
+
+.cls-4 {
+    font-size: 76.98px;
+    font-family: "PT Serif";
+    letter-spacing: 10px;
+}
+
+.cls-5 {
+    font-size: 120px;
+    fill: #ffda5d;
+    font-family: "PT Serif";
+    font-weight: 700;
+}
+
+.cls-6 {
+    letter-spacing: -11px;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.text {
+    color: #283452;
+    margin-right: 150px;
+    line-height: 1;
+    font-weight: lighter;
+    margin-left: 550px;
+    margin-top: 0px;
+    font-size: 1em;
+}
+
+.section {
+    margin-bottom: 110px;
 }
 
 #logo {
-  background-color: #FFFFFF;
-  text-align: center;
-  height: 90px;
+    background-color: #FFFFFF;
+    text-align: center;
+    height: 90px;
 }
 
 #logo img {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .hashtag {
-  color: #000;
-  text-align: center;
-  letter-spacing: .5px;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 2;
-  margin: 5px;
-  height: 60px;
-  font-size: 20px;
+    color: #000;
+    text-align: center;
+    letter-spacing: .5px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 2;
+    margin: 5px;
+    height: 60px;
+    font-size: 20px;
 }
 
-#posts-list
-{
+#posts-list {
     width: 100%;
     overflow: hidden;
     margin-bottom: -1.875em;
@@ -43,30 +290,30 @@ body {
 }
 
 h1 {
-  color: #000;
-  text-align: center;
-  letter-spacing: .5px;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 2;
-  margin: 0;
+    color: #000;
+    text-align: center;
+    letter-spacing: .5px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 2;
+    margin: 0;
 }
 
 a {
-  color: rgb(234, 234, 234);
-  text-decoration: none;
-  font-weight: 200;
+    color: rgb(234, 234, 234);
+    text-decoration: none;
+    font-weight: 200;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 a#hashtag-anchor {
- display: block;
- position: relative;
- top: -250px;
- visibility: hidden;
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
@@ -75,34 +322,34 @@ a#hashtag-anchor {
 }
 
 .post-text > iframe {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .youtube-video {
-  height: 200px;
-  margin: 0.5em;
+    height: 200px;
+    margin: 0.5em;
 }
 
 .vine-video {
-  display: block;
-  margin: auto;
+    display: block;
+    margin: auto;
 }
 
 .post-container {
-  margin: 5px 5px;
-  width: 30%;
-  text-align: center;
-  width: 92%;
-  float: left;
-  padding: 1.5% .75%;
-  margin: 5px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+    margin: 5px 5px;
+    width: 30%;
+    text-align: center;
+    width: 92%;
+    float: left;
+    padding: 1.5% .75%;
+    margin: 5px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 }
 
 .post-picture img {
-  width: 60%;
+    width: 60%;
 }
 
 .post-container section {
@@ -110,52 +357,53 @@ a#hashtag-anchor {
 }
 
 .post-text {
-  font-style: italic;
-  font-size: 22px;
+    font-style: italic;
+    font-size: 22px;
 }
 
 .post-username {
-  font-weight: bold;
-  font-size: 14px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .post-id {
-  display: none;
+    display: none;
 }
 
-.avatar{
- width: 40px;
- height: 40px;
- background-size: cover;
- border-radius: 25px;
- -webkit-border-radius: 25px;
- -moz-border-radius: 25px;
- }
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+}
 
 .post-created-at {
-  font-size: 11px;
-  display: inline-block;
+    font-size: 11px;
+    display: inline-block;
 }
 
 .post-created-at i {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .footer {
-  display: block;
-  color: rgb(38,189,207);
-  margin-top: 30px;
-  text-align: center;
+    display: block;
+    color: rgb(38, 189, 207);
+    margin-top: 30px;
+    text-align: center;
 }
 
 .footer a {
-  color: rgba(80, 136, 251, 1);
+    color: rgba(80, 136, 251, 1);
 }
 
 /*ThoughtWorks Magenta*/
 .background-color-1 {
-  background: rgb(177, 28, 84);
+    background: rgb(177, 28, 84);
 }
+
 /*ThoughtWorks Turquoise*/
 .background-color-3 {
     background: rgb(128, 201, 210)
@@ -163,33 +411,35 @@ a#hashtag-anchor {
 
 /*ThoughtWorks Orange*/
 .background-color-2 {
-background: rgb(247, 143, 49);
+    background: rgb(247, 143, 49);
 }
 
 /*ThoughtWorks Green  */
 .background-color-4 {
-  background: rgb(181, 185, 53);
+    background: rgb(181, 185, 53);
 }
 
-#last_page_requested{
-  display:none;
+#last_page_requested {
+    display: none;
 }
 
 .hashtag-title {
-  text-decoration: none;
-   z-index: 1;
-   background-color: #EFEFEF;
-   position: fixed;
-   top:0; left:0;
-   width: 100%;
- }
+    text-decoration: none;
+    z-index: 1;
+    background-color: #EFEFEF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 
- .hashtag-title:hover {
-  background-color: #F6F6F6;
- }
+.hashtag-title:hover {
+    background-color: #F6F6F6;
+    text-decoration: none;
+    color: #ff4a4a;
+}
 
-@media ( min-width: 768px )
-{
+@media ( min-width: 768px ) {
 
     h1 {
         margin: 10px 0 10px 0;
@@ -198,18 +448,18 @@ background: rgb(247, 143, 49);
     body {
         margin-top: 85px;
     }
-    .post-container
-    {
+
+    .post-container {
         width: 45.876%;
         margin: 5px;
     }
+
     #posts-list {
-     padding-left: 0;
+        padding-left: 0;
     }
 }
 
-@media ( min-width: 992px )
-{
+@media ( min-width: 992px ) {
 
     h1 {
         margin: 15px 0 15px 0;
@@ -218,8 +468,8 @@ background: rgb(247, 143, 49);
     body {
         margin-top: 95px;
     }
-    #posts-list
-    {
+
+    #posts-list {
         padding-left: 0;
         width: 100%;
         overflow: hidden;
