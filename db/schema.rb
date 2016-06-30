@@ -17,15 +17,15 @@ ActiveRecord::Schema.define(version: 20141006163452) do
   enable_extension "plpgsql"
 
   create_table "posts", force: true do |t|
-    t.string   "media_url"
-    t.string   "screen_name"
-    t.string   "profile_image_url"
-    t.string   "source"
+    t.string "media_url"
+    t.string "screen_name"
+    t.string "profile_image_url"
+    t.string "source"
     t.datetime "time_of_post"
-    t.text     "text"
+    t.text "text"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "post_id"
+    t.string "post_id"
   end
 
 end
