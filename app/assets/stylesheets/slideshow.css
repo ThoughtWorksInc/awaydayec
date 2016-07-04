@@ -23,6 +23,9 @@
     opacity: 0.8;
     padding: 7px 10px 10px 15px;
     color: #FFFFFF;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    text-shadow: 0 1px 0 black;
 }
 
 .flexslider .slides a {
