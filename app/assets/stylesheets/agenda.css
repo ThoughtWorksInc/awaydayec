@@ -1,0 +1,62 @@
+body:not([id]) {
+  overflow: visible;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.food {
+  background: linear-gradient(180deg, #FFFFFF 20%, #fcde6e 80%);
+}
+
+.keynote {
+  background: linear-gradient(180deg, #FFFFFF 20%, #c798d2 80%);
+}
+
+.talk {
+  background: linear-gradient(180deg, #FFFFFF 20%, #f59799 80%);
+}
+
+.game {
+  background: linear-gradient(180deg, #FFFFFF 20%, #cbeffa 80%);
+}
+
+.cotopaxi::after {
+  content: "Cotopaxi";
+  display: block;
+  background: white;
+  margin-top: 1px;
+  padding-left: 5px;
+  width: 110%;
+  margin-left: -5px;
+}
+
+table {
+  width:100%;
+  font-size: 4vw;
+  color: black;
+  /*table-layout: fixed;*/
+}
+
+thead {
+  background: linear-gradient(180deg, #FFFFFF 20%, #a7e0bc 80%);
+}
+
+tbody td {
+  padding: 0 5px;
+}
+tr:hover {
+  background-color: #f5f5f5
+}
+
+th, td {
+  border-bottom: 20px solid white;
+}
+
+tr td:first-child {
+  vertical-align: top;
+  width: 30%;
+  text-align: right;
+}
