@@ -25,6 +25,14 @@ class FeedController < ApplicationController
     render_json_posts @posts
   end
 
+  def agenda
+    respond_to do |format|
+      format.html do
+        render "agenda"
+      end
+    end
+  end
+
   private
 
   def render_json_posts(posts)
