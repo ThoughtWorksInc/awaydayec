@@ -11,14 +11,13 @@ body {
     word-wrap: break-word;
     color: #FFFFFF;
     background-color: #101010;
-    line-height: 24px;
     margin: 0px;
     padding: 0px;
     border: 0;
-    overflow: hidden;
 }
 
 .main {
+    line-height: 24px;
     display: flex;
     height: 100vh;
     width: 100%;
