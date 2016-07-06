@@ -1,5 +1,7 @@
 div.agenda {
   background-color: white;
+  width: 70%;
+  margin-left: 15%;
 }
 
 .agenda a {

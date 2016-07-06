@@ -31,6 +31,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'faker', github: 'stympy/faker'
+  gem 'byebug'
 end
 
 group :test do

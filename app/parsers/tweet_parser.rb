@@ -12,7 +12,7 @@ class TweetParser
         parsed_response << { source: "twitter",
                             text: text,
                             screen_name: screen_name,
-                            time_of_post: tweet["created_at"],
+                            time_of_post: tweet["created_at"].to_datetime,
                             profile_image_url: tweet["user"]["profile_image_url"],
                             media_url: get_media_url(tweet),
                             post_id: tweet["id_str"] }
@@ -24,7 +24,7 @@ class TweetParser
 
   def self.get_media_url(tweet)
     media = tweet["entities"]["media"]
-    return media ? media[0]["media_url_https"] : nil
+    return media ? media[0]["media_url_https"] : "https://pbs.twimg.com/media/Cmsp9kJXgAAvXFH.jpg"
   end
 
   def self.replace_media_links(tweet)
