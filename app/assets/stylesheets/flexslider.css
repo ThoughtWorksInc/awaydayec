@@ -178,16 +178,20 @@ html[xmlns] .slides {
     cursor: default;
 }
 
+.flex-direction-nav a {
+    color: #FFFFFF;
+}
+
 .flex-direction-nav a:before {
     font-family: "flexslider-icon";
     font-size: 40px;
     line-height: 1;
     display: inline-block;
-    content: '\f001';
+    content: '<';
 }
 
 .flex-direction-nav a.flex-next:before {
-    content: '\f002';
+    content: '>';
 }
 
 /* Pause/Play */
