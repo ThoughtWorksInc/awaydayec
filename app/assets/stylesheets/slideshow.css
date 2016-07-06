@@ -29,7 +29,8 @@
 }
 
 .flexslider .slides a {
-    color: #097AC0;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .flexslider .slides .author {

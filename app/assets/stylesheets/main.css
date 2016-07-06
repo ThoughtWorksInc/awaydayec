@@ -65,7 +65,7 @@ body {
     font-style: normal;
     color: #f16254;
     opacity: 1;
-    margin-top: 470px;
+    margin-top: 420px;
     margin-left: 0px;
 }
 
@@ -82,6 +82,20 @@ body {
     text-transform: uppercase;
     opacity: 1;
 }
+
+.hashtag-title a {
+    margin-top: 0px;
+    position: relative;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 1.5em;
+    border: 1px solid #f16254;
+    padding: 5px;
+    color: #f16254;
+    background-color: #101010;
+}
+
+
 
 #logo {
     text-align: left;
@@ -273,6 +287,10 @@ h1 {
 
 #last_page_requested {
     display: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 @media ( min-width: 768px ) {
