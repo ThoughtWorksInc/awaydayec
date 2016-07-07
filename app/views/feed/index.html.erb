@@ -1,8 +1,10 @@
 <div class="main">
   <div class="left">
     <div class="hashtag-title">
-      <br><br>
-      <a href=/agenda>the agenda</a>
+      <div class="agenda">
+        <br><br>
+        <a href=/agenda>the agenda</a>
+      </div>
       <div class="logo-ecuador">
         <svg version="1.1" viewBox="0 0 1278.83 1290.54" height="352" preserveAspectRatio="xMinYMin meet">
           <title>imgs</title>
@@ -127,12 +129,13 @@
           </text>
         </svg>
       </div>
-
-      <h1 class="title">awayDay</h1>
-      <h1 class="country">Ecuador.</h1>
-      <div id="logo">
-        <%= image_tag("tw_logo.png", height: "52", alt: "Edit Entry") %>
-        <span class="hashtag">#<%= ENV["HASHTAG"] %></span>
+      <div class="info">
+        <h1 class="title">awayDay</h1>
+        <h1 class="country">Ecuador.</h1>
+        <div id="logo">
+          <%= image_tag("tw_logo.png", height: "52", alt: "Edit Entry") %>
+          <span class="hashtag">#<%= ENV["HASHTAG"] %></span>
+        </div>
       </div>
     </div>
   </div>

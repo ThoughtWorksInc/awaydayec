@@ -23,6 +23,14 @@ Post.create!(media_url: "http://colonialhousequito.com/images/quito-ecuador.jpg"
              text: "la vida",
              post_id: "2")
 
+Post.create!(media_url: "http://colonialhousequito.com/images/quito-ecuador.jpg",
+             screen_name: "Example User Cat",
+             profile_image_url: "https://dl.dropboxusercontent.com/u/72193719/away.jpg",
+             source: "nose",
+             time_of_post: '2001-02-03T04:05:06+07:00',
+             text: "la vida",
+             post_id: "12")
+
 5.times do |n|
   media_url = "http://www.carasycaretas.com.uy/wp-content/uploads/2016/04/07/VolcanChimborazo-e1460047369278.jpg"
   screen_name = Faker::Name.name

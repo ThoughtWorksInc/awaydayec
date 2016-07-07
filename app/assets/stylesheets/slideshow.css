@@ -10,12 +10,10 @@
 .flexslider .slides img {
     height: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 .flexslider .slides .post-data {
-    margin-left: 380px;
-    margin-bottom: 20px;
-    top: 65%;
     text-align: right;
     width: 350px;
     position: absolute;
@@ -26,6 +24,8 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     text-shadow: 0 1px 0 black;
+    bottom: 10%;
+    right: 5%;
 }
 
 .flexslider .slides a {
@@ -35,7 +35,7 @@
 
 .flexslider .slides .author {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.7vw;
     margin-right: 4px;
     color: #FFFFFF;
     text-decoration: none;
@@ -44,6 +44,7 @@
 .flexslider .slides .text {
     color: #FFFFFF;
     display: inline;
+    font-size: 1.2vw;
 }
 
 .flex-control-paging li {

@@ -14,6 +14,7 @@ body {
     margin: 0px;
     padding: 0px;
     border: 0;
+    overflow: hidden;
 }
 
 .main {
@@ -42,21 +43,30 @@ body {
     opacity: 0.8;
     position: fixed;
     width: 26%;
-    height: 90%;
+    height: 100%;
     margin-left: 100px;
     border: 1px solid transparent;
     border-radius: 5px;
 }
 
+.agenda {
+    width: 100%;
+}
+
 .logo-ecuador {
     position: absolute;
-    right: 5%;
-    top: 20%;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.info {
+    width: 100%;
+    margin-top: 370px;
 }
 
 /*import to a global div*/
 .title {
-    margin: 0px;
+    /*margin: 0px;*/
     font-family: 'Roboto', sans-serif;
     font-size: 4vw;
     font-weight: 500;
@@ -65,8 +75,8 @@ body {
     font-style: normal;
     color: #f16254;
     opacity: 1;
-    margin-top: 420px;
-    margin-left: 0px;
+    margin-left: 100px;
+    position: absolute;
 }
 
 .country {
@@ -78,9 +88,11 @@ body {
     line-height: 0.3;
     text-align: left;
     margin-left: 160px;
+    margin-top: 80px;
     font-style: normal;
     text-transform: uppercase;
     opacity: 1;
+    position: absolute;
 }
 
 .hashtag-title a {
@@ -95,30 +107,26 @@ body {
     background-color: #101010;
 }
 
-
-
 #logo {
     text-align: left;
-    width: 80%;
-    height: 80%;
-    bottom: 10%;
+    width: 100%;
 }
 
 #logo img {
     position: absolute;
-    top: 90%;
-    left: 44%;
     height: 40px;
+    margin-top: 100px;
+    margin-left: 200px;
 }
 
 .hashtag {
     position: absolute;
-    top: 91%;
     color: #7eb49d;
     letter-spacing: .5px;
     font-weight: 300;
     font-style: italic;
     line-height: 2;
+    margin-top: 100px;
     margin-left: 50px;
     height: 60px;
     font-size: 16px;

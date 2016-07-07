@@ -47,6 +47,7 @@
     padding: 0;
 }
 
+/*weird behavior*/
 .flexslider .slides > li {
     display: none;
     -webkit-backface-visibility: hidden;
@@ -55,7 +56,7 @@
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {
     width: 100%;
-    display: block;
+    display: inline-block;
 }
 
 .flex-pauseplay span {
