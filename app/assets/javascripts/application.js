@@ -15,5 +15,4 @@
 //= require turbolinks
 //= require imagesloaded.pkgd
 //= require jquery.flexslider
-//= require jquery.main
 //= require_tree .

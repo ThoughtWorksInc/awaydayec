@@ -14,7 +14,7 @@ body {
     margin: 0px;
     padding: 0px;
     border: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .main {
@@ -49,8 +49,9 @@ body {
     border-radius: 5px;
 }
 
-.agenda {
+.next-page {
     width: 100%;
+    margin-top: 50px;
 }
 
 .logo-ecuador {
@@ -61,12 +62,11 @@ body {
 
 .info {
     width: 100%;
-    margin-top: 370px;
+    margin-top: 400px;
 }
 
 /*import to a global div*/
 .title {
-    /*margin: 0px;*/
     font-family: 'Roboto', sans-serif;
     font-size: 4vw;
     font-weight: 500;
