@@ -377,7 +377,13 @@ a {
         margin-bottom: 10px;
         font-size: 48px;
         font-weight: 500;
+        text-align: left;
     }
 
+    .right .responsive-box  a {
+        color: #f16254;
+        border: 1px solid #f16254;
+        padding: 4px;
+    }
 
 }
