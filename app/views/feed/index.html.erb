@@ -141,7 +141,10 @@
 
   <div class="right">
     <div class="flexslider">
-      <h1 class="responsive-title">AwayDay Ecuador</h1>
+      <div class="responsive-box">
+        <h1 class="responsive-title">AwayDay Ecuador</h1>
+        <p><a href=/agenda>agenda</a></p>
+      </div>
       <ul class="slides">
         <% @posts.each_with_index do |post, i| %>
             <% if post.media_url %>
