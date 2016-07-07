@@ -54,3 +54,13 @@
 .flex-control-paging li:nth-last-child(-n + 20) {
     display: inline-block;
 }
+
+@media (max-width: 1100px) {
+    .flexslider .slides .post-data {
+        width: 90%;
+        bottom: auto;
+        left: 3%;
+        line-height: 0.7;
+        padding: 8px;
+    }
+}
