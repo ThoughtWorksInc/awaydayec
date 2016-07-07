@@ -2,8 +2,8 @@
   <div class="image">
     <img src="<%= post.media_url %>" >
     <div class="post-data">
-      <!--<p>-->
-        <%= link_to post.screen_name, post.profile_image_url, class: "author" %>
+      <p>
+        <%= link_to post.screen_name, post.profile_image_url, class: "author" %></p>
       <%= content_tag :p, post.text, class: "text" %>
     </div>
   </div>
