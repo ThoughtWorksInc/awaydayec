@@ -63,6 +63,11 @@ body {
 .info {
     width: 100%;
     margin-top: 400px;
+    display: block;
+}
+
+.responsive-title {
+    display: none;
 }
 
 /*import to a global div*/
@@ -303,6 +308,8 @@ a {
 
 @media ( min-width: 768px ) {
 
+
+
     h1 {
         margin: 10px 0 10px 0;
     }
@@ -339,9 +346,29 @@ a {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
     .main {
         flex-direction: column;
     }
+    .left {
+        order: 1;
+        display: none;
+    }
+
+    .right {
+        order: 0;
+    }
+    .right .responsive-title {
+        display: inline;
+        color: #f16254;
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        letter-spacing: -1px;
+        line-height: 1;
+        font-style: normal;
+        opacity: 1;
+        margin-bottom: 10px;
+    }
+
 
 }
