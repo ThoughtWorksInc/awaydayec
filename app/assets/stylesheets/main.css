@@ -96,11 +96,10 @@ body {
 }
 
 .hashtag-title a {
-    margin-top: 0px;
     position: relative;
     margin-left: 50px;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.7vw;
     border: 1px solid #f16254;
     padding: 5px;
     color: #f16254;
@@ -126,10 +125,10 @@ body {
     font-weight: 300;
     font-style: italic;
     line-height: 2;
-    margin-top: 100px;
+    margin-top: 105px;
     margin-left: 50px;
     height: 60px;
-    font-size: 16px;
+    font-size: 1.2vw;
 }
 
 .cls-1, .cls-3, .cls-4 {
@@ -148,18 +147,18 @@ body {
 }
 
 .cls-3 {
-    font-size: 86.23px;
+    font-size: 7vw;
     font-family: aPapa;
 }
 
 .cls-4 {
-    font-size: 76.98px;
+    font-size: 6vw;
     font-family: "PT Serif";
     letter-spacing: 10px;
 }
 
 .cls-5 {
-    font-size: 120px;
+    font-size: 8vw;
     fill: #7eb49d;
     font-family: "PT Serif";
     font-weight: 700;
@@ -233,12 +232,12 @@ h1 {
 
 .post-text {
     font-style: italic;
-    font-size: 22px;
+    font-size: 2vw;
 }
 
 .post-username {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 2vw;
 }
 
 .post-id {
@@ -255,7 +254,7 @@ h1 {
 }
 
 .post-created-at {
-    font-size: 11px;
+    font-size: 2vw;
     display: inline-block;
 }
 

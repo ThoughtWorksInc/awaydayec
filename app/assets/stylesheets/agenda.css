@@ -1,68 +1,78 @@
 div.agenda {
-  background-color: white;
-  width: 70%;
-  margin-left: 15%;
+    background-color: white;
+    width: 70%;
+    margin-left: 15%;
 }
 
 .agenda a {
-  text-decoration: none;
+    text-decoration: none;
+    margin-top: 0px;
+    position: relative;
+        margin-left: 50px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #f16254;
 }
 
 .food {
-  background: linear-gradient(180deg, #FFFFFF 10%, #fcde6e 0%);
+    background: linear-gradient(180deg, #FFFFFF 10%, #fcde6e 0%);
 }
 
 .keynote {
-  background: linear-gradient(180deg, #FFFFFF 10%, #c798d2 0%);
+    background: linear-gradient(180deg, #FFFFFF 10%, #c798d2 0%);
 }
 
 .talk {
-  background: linear-gradient(180deg, #FFFFFF 10%, #f59799 0%);
+    background: linear-gradient(180deg, #FFFFFF 10%, #f59799 0%);
 }
 
 .game {
-  background: linear-gradient(180deg, #FFFFFF 10%, #cbeffa 0%);
+    background: linear-gradient(180deg, #FFFFFF 10%, #cbeffa 0%);
 }
 
 .cotopaxi::after {
- /* content: "Cotopaxi";*/
-  display: block;
-  background: white;
-  margin-top: 1px;
-  padding-left: 5px;
-  width: 110%;
-  margin-left: -5px;
-  position: absolute;
+    /* content: "Cotopaxi";*/
+    display: block;
+    background: white;
+    margin-top: 1px;
+    padding-left: 5px;
+    width: 110%;
+    margin-left: -5px;
+    position: absolute;
 }
 
 @media only screen and (max-width: 640px) {
-  font-size: 4vw;
+    font-size:
+
+4vw
+
+;
 }
 
 table {
-  width:100%;
-  color: black;
-  /*table-layout: fixed;*/
+    width: 100%;
+    color: black;
+    /*table-layout: fixed;*/
 }
 
 thead {
-  background: linear-gradient(180deg, #FFFFFF 10%, #a7e0bc 0%);
+    background: linear-gradient(180deg, #FFFFFF 10%, #a7e0bc 0%);
 }
 
 tbody td {
-  padding: 5px;
+    padding: 5px;
 }
 
 tbody tr:hover {
-  background-color: #f5f5f5
+    background-color: #f5f5f5
 }
 
 th, td {
-  border-bottom: 20px solid white;
+    border-bottom: 20px solid white;
 }
 
 tr td:first-child {
-  vertical-align: top;
-  width: 30%;
-  text-align: right;
+    vertical-align: top;
+    width: 30%;
+    text-align: right;
 }
