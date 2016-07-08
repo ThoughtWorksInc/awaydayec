@@ -28,6 +28,10 @@ class FeedController < ApplicationController
   def agenda
     respond_to do |format|
       format.html do
+        if params[:lang] && params[:lang].downcase.casecmp("en") == 0
+          return render "agenda-en"
+        end
+
         render "agenda"
       end
     end
