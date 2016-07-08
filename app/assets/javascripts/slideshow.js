@@ -1,4 +1,4 @@
-$(window).load(function () {
+var slider = function () {
     var dashtagSlider = $('.flexslider').flexslider({
         animation: 'slide',
         animationLoop: false,
@@ -27,4 +27,6 @@ $(window).load(function () {
         var liElement = $('<li>').attr('data-post-id', post.id).append(divElement).append(imgElement);
         dashtagSlider.data('flexslider').addSlide(liElement);
     };
-});
+};
+
+$(document).on('ready page:load', slider);
