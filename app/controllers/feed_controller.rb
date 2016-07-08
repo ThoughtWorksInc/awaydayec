@@ -33,6 +33,14 @@ class FeedController < ApplicationController
     end
   end
 
+  def location
+    respond_to do |format|
+      format.html do
+        render "location"
+      end
+    end
+  end
+
   private
 
   def render_json_posts(posts)

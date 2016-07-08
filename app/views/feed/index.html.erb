@@ -2,7 +2,8 @@
   <div class="left">
     <div class="hashtag-title">
       <div class="next-page">
-        <a href=/agenda>agenda</a>
+        <%= link_to "agenda", agenda_path %>
+        <%= link_to "mapa", map_path %>
       </div>
       <div class="logo-ecuador">
         <svg version="1.1" viewBox="5 0 1300 1300 " height="352" preserveAspectRatio="xMinYMin meet">
@@ -132,7 +133,7 @@
         <h1 class="title">awayDay</h1>
         <h1 class="country">Ecuador.</h1>
         <div id="logo">
-          <%= image_tag("tw_logo.png", height: "52", alt: "Edit Entry") %>
+          <%= image_tag("tw_logo.png", height: "52", alt: "TW logo") %>
           <span class="hashtag">#<%= ENV["HASHTAG"] %></span>
         </div>
       </div>
@@ -143,7 +144,10 @@
     <div class="flexslider">
       <div class="responsive-box">
         <h1 class="responsive-title">AwayDay Ecuador</h1>
-        <p><a href=/agenda>agenda</a></p>
+        <p>
+          <%= link_to "agenda", agenda_path %>
+          <%= link_to "mapa", map_path %>
+        </p>
       </div>
       <ul class="slides">
         <% @posts.each_with_index do |post, i| %>

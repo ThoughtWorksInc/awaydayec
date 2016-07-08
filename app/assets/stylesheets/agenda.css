@@ -4,7 +4,8 @@ div.agenda {
     margin-left: 15%;
 }
 
-.agenda a {
+.agenda a,
+.location a{
     margin-top: 0px;
     position: relative;
     margin-left: 50px;
