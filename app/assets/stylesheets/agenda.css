@@ -56,6 +56,23 @@ div.agenda {
     content: "Cotopaxi";
 }
 
+.cayambe span::after {
+    content: "Cayambe";
+}
+
+.tungurahua span::after {
+    content: "Thungurahua";
+}
+
+.pichincha span::after {
+    content: "Pichincha";
+}
+
+.cancha span::after {
+    content: "Soccer field";
+    width: 100px;
+}
+
 @media (max-width: 640px) {
     .agenda, .location,
     .agenda .next-page a,
