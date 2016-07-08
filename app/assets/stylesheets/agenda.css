@@ -5,13 +5,9 @@ div.agenda {
 }
 
 .agenda a {
-    text-decoration: none;
     margin-top: 0px;
     position: relative;
     margin-left: 50px;
-    text-decoration: none;
-    font-size: 1.5em;
-    color: #f16254;
 }
 
 .food {
@@ -41,12 +37,18 @@ div.agenda {
     position: absolute;
 }
 
-@media only screen and (max-width: 640px) {
-    font-size:
+@media (max-width: 640px) {
+    .agenda, .location,
+    .agenda .next-page a,
+    .location .next-page a{
+        font-size: 4vw;
+        margin-left: 5%;
+        top: -25px;
+    }
 
-4vw
-
-;
+    .agenda .next-page {
+        height: auto;
+    }
 }
 
 table {
@@ -75,4 +77,10 @@ tr td:first-child {
     vertical-align: top;
     width: 30%;
     text-align: right;
+}
+
+/* Location */
+.location img {
+    width: 400px;
+    margin: 30px;
 }
