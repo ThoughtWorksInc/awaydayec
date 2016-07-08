@@ -1,7 +1,19 @@
+a:hover {
+  font-weight: bold;
+}
+
 div.agenda {
     background-color: white;
     width: 70%;
     margin-left: 15%;
+}
+
+.agenda .next-page a.download {
+  border: none;
+  font-size: 10px;
+  margin-left: 0;
+  float: right;
+  margin-right: 4%;
 }
 
 .agenda a,
