@@ -52,6 +52,10 @@ div.agenda {
     content: "Quilotoa";
 }
 
+.cotopaxi span::after {
+    content: "Cotopaxi";
+}
+
 @media (max-width: 640px) {
     .agenda, .location,
     .agenda .next-page a,
