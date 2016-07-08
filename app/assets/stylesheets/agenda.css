@@ -35,17 +35,21 @@ div.agenda {
   display: block;
   margin-top: 10px;
   text-align: center;
+  background: #fcde6e none repeat scroll 0% 0%;
 }
 
-.legend.restaurant {
-  background: #fcde6e none repeat scroll 0% 0%;
+.legend span::after {
+    background: transparent;
+    margin-left: 10px;
+    position: absolute;
 }
 
 .restaurant span::after {
     content: "Restaurant";
-    background: transparent;
-    margin-left: 10px;
-    position: absolute;
+}
+
+.quilotoa span::after {
+    content: "Quilotoa";
 }
 
 @media (max-width: 640px) {
