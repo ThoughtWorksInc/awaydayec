@@ -27,14 +27,25 @@ div.agenda {
     background: linear-gradient(180deg, #FFFFFF 10%, #cbeffa 0%);
 }
 
-.cotopaxi::after {
-    /* content: "Cotopaxi";*/
-    display: block;
-    background: white;
-    margin-top: 1px;
-    padding-left: 5px;
-    width: 110%;
-    margin-left: -5px;
+.legend {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.legend.restaurant {
+  background: #fcde6e none repeat scroll 0% 0%;
+  content: "1";
+}
+
+.restaurant span::after {
+    content: "Restaurant";
+    background: transparent;
+    margin-left: 5px;
     position: absolute;
 }
 
@@ -49,6 +60,10 @@ div.agenda {
 
     .agenda .next-page {
         height: auto;
+    }
+    .legend {
+        width: 10px;
+        height: 10px;
     }
 }
 
@@ -83,5 +98,9 @@ tr td:first-child {
 /* Location */
 .location img {
     width: 400px;
-    margin: 30px;
+    margin-top: 10px
+}
+
+.location .next-page {
+  height: auto;
 }

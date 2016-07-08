@@ -3,4 +3,6 @@
     <%= link_to "agenda", agenda_path%>
     <%= link_to "fotos", root_path %>
   </div>
-  <%= image_tag("map.png", alt: "Map") %>
+  <a download="map.png" title="Download map" href="/assets/map.png">
+    <%= image_tag("map.png", alt: "Map") %>
+  </a>
