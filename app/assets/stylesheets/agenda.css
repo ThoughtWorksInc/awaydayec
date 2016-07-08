@@ -82,6 +82,11 @@ div.agenda {
         top: -25px;
     }
 
+    div.agenda {
+        width: inherit!important;
+        margin: inherit!important;
+    }
+
     .agenda .next-page {
         height: auto;
     }
