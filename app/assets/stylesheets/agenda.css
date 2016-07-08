@@ -86,6 +86,19 @@ div.agenda {
         height: auto;
     }
 
+    .main .hashtag {
+        position: inherit;
+        margin: 0;
+        font-size: inherit;
+    }
+
+    .flexslider .slides .text {
+        font-size: 2vw;
+    }
+
+    .flexslider .slides .text {
+        font-size: 1.8vw;
+    }
 /*    @-moz-document url-prefix() {
         .legend {
             width: 10px;

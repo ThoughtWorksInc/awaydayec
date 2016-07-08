@@ -331,6 +331,12 @@ a {
     #posts-list {
         padding-left: 0;
     }
+
+    .main .hashtag {
+        position: inherit;
+        margin: 0;
+        font-size: inherit;
+    }
 }
 
 @media ( min-width: 992px ) {
