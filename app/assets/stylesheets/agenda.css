@@ -39,13 +39,12 @@ div.agenda {
 
 .legend.restaurant {
   background: #fcde6e none repeat scroll 0% 0%;
-  content: "1";
 }
 
 .restaurant span::after {
     content: "Restaurant";
     background: transparent;
-    margin-left: 5px;
+    margin-left: 10px;
     position: absolute;
 }
 
@@ -61,16 +60,19 @@ div.agenda {
     .agenda .next-page {
         height: auto;
     }
-    .legend {
-        width: 10px;
-        height: 10px;
-    }
+
+/*    @-moz-document url-prefix() {
+        .legend {
+            width: 10px;
+            height: 10px;
+
+        }
+    }*/
 }
 
 table {
     width: 100%;
     color: black;
-    /*table-layout: fixed;*/
 }
 
 thead {
@@ -86,7 +88,7 @@ tbody tr:hover {
 }
 
 th, td {
-    border-bottom: 20px solid white;
+    border-bottom: 30px solid white;
 }
 
 tr td:first-child {
